@@ -156,7 +156,7 @@ function applyState(state: AssistantState) {
 }
 
 function buildParticles() {
-  const COUNT = 600;
+  const COUNT = 1200;
   const positions = new Float32Array(COUNT * 3);
   for (let i = 0; i < COUNT; i++) {
     // distribuição em casca esférica (raio 1.35–1.7)
@@ -173,7 +173,7 @@ function buildParticles() {
     size: 0.025,
     color: new THREE.Color("#9bd9ff"),
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.5,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
   });

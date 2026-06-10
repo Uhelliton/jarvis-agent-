@@ -143,8 +143,6 @@ export const suggestions: Suggestion[] = [
     icon: "calendar",
     text: "Confirmar reunião das 9h com o time de Produto",
   },
-  { id: "s2", icon: "file", text: "Revisar proposta do cliente até as 14h" },
-  { id: "s3", icon: "mail", text: "Responder 5 e-mails pendentes" },
   {
     id: "s4",
     icon: "run",
