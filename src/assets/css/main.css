@@ -102,6 +102,12 @@
   100% { background-position: 200% 0; }
 }
 
+/* Ondas expansivas ao redor do orbe — sensação de vida/pulso */
+@keyframes orbWave {
+  0%   { transform: scale(0.7); opacity: 0.45; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -180,6 +186,30 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* Halo difuso atrás do orbe — glow ambiente que respira */
+  .orb-halo {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      oklch(0.68 0.2 290 / 0.32),
+      oklch(0.6 0.18 250 / 0.12) 45%,
+      transparent 70%
+    );
+    filter: blur(34px);
+    animation: var(--animate-breathe);
+    pointer-events: none;
+  }
+
+  /* Anéis de onda que emanam do orbe */
+  .orb-wave {
+    position: absolute;
+    border-radius: 9999px;
+    border: 1px solid oklch(0.78 0.14 280 / 0.28);
+    animation: orbWave 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    pointer-events: none;
   }
 }
 

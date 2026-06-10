@@ -34,14 +34,16 @@ export interface LifeItem {
   gradient: string;
 }
 
-export interface Suggestion {
+export interface FeedItem {
   id: string;
-  icon: "calendar" | "file" | "mail" | "run";
+  icon: "mail" | "calendar" | "run" | "file";
   text: string;
+  action: string;
+  command: string;
 }
 
 export const user = {
-  name: "Lucas",
+  name: "Uhelliton",
   avatar:
     "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop",
 };
@@ -137,16 +139,35 @@ export const life: LifeItem[] = [
   },
 ];
 
-export const suggestions: Suggestion[] = [
+/* Feed contextual — o que a IA notou e merece sua atenção agora */
+export const feed: FeedItem[] = [
   {
-    id: "s1",
-    icon: "calendar",
-    text: "Confirmar reunião das 9h com o time de Produto",
+    id: "f1",
+    icon: "mail",
+    text: "Você possui 5 e-mails não lidos.",
+    action: "Abrir",
+    command: "Abrir meus e-mails não lidos",
   },
   {
-    id: "s4",
+    id: "f2",
+    icon: "calendar",
+    text: "Reunião amanhã às 09h.",
+    action: "Ver",
+    command: "Mostrar os detalhes da reunião de amanhã às 9h",
+  },
+  {
+    id: "f3",
     icon: "run",
-    text: "Treinar antes das 15h (chuva prevista às 17h)",
+    text: "Academia agendada para 16h.",
+    action: "Lembrar",
+    command: "Criar um lembrete para a academia às 16h",
+  },
+  {
+    id: "f4",
+    icon: "file",
+    text: "Proposta comercial pendente.",
+    action: "Abrir",
+    command: "Abrir a proposta comercial pendente",
   },
 ];
 
