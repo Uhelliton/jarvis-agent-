@@ -1,0 +1,36 @@
+{
+  "name": "jarvis-front",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "JARVIS - assistente pessoal inteligente (UI em Vue 3 + Vite)",
+  "engines": {
+    "node": ">=20.19.0 || >=22.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc -b --noEmit"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
+    "lucide-vue-next": "^0.468.0",
+    "motion-v": "^2.3.0",
+    "reka-ui": "^2.0.0",
+    "tailwind-merge": "^2.6.0",
+    "three": "^0.184.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/three": "^0.184.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}
